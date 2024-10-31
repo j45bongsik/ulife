@@ -1,0 +1,211 @@
+@charset "utf-8";
+
+/* ========== notosans-hestia ========== */
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Noto Sans Thin'), local('NotoSans-Thin'),
+    url(./font/notoSans/eot/NotoSansKR-Thin-Hestia.eot),
+    url(./font/notoSans/eot/NotoSansKR-Thin-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(./font/notoSans/woff/NotoSansKR-Thin-Hestia.woff) format('woff'),
+    url(./font/notoSans/otf/NotoSansKR-Thin-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Noto Sans Light'), local('NotoSans-Light'),
+    url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot),
+    url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(./font/notoSans/woff/NotoSansKR-Light-Hestia.woff) format('woff'),
+    url(./font/notoSans/otf/NotoSansKR-Light-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 350;
+    src: local('Noto Sans DemiLight'), local('NotoSans-DemiLight'),
+    url(./font/notoSans/eot/NotoSansKR-DemiLight-Hestia.eot),
+    url(./font/notoSans/eot/NotoSansKR-DemiLight-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(./font/notoSans/woff/NotoSansKR-DemiLight-Hestia.woff) format('woff'),
+    url(./font/notoSans/otf/NotoSansKR-DemiLight-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Noto Sans Regular'), local('NotoSans-Regular'),
+    url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot),
+    url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(./font/notoSans/woff/NotoSansKR-Regular-Hestia.woff) format('woff'),
+    url(./font/notoSans/otf/NotoSansKR-Regular-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Noto Sans Medium'), local('NotoSans-Medium'),
+    url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot),
+    url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(./font/notoSans/woff/NotoSansKR-Medium-Hestia.woff) format('woff'),
+    url(./font/notoSans/otf/NotoSansKR-Medium-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Noto Sans Bold'), local('NotoSans-Bold'),
+    url(./font/notoSans/eot/NotoSansKR-Bold-Hestia.eot),
+    url(./font/notoSans/eot/NotoSansKR-Bold-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(./font/notoSans/woff/NotoSansKR-Bold-Hestia.woff) format('woff'),
+    url(./font/notoSans/otf/NotoSansKR-Bold-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Noto Sans Black'), local('NotoSans-Black'),
+    url(./font/notoSans/eot/NotoSansKR-Black-Hestia.eot),
+    url(./font/notoSans/eot/NotoSansKR-Black-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(./font/notoSans/woff/NotoSansKR-Black-Hestia.woff) format('woff'),
+    url(./font/notoSans/otf/NotoSansKR-Black-Hestia.otf) format('opentype');
+}
+
+
+
+/* ========== GmargetSans ========== */
+@font-face {
+	font-family: 'GM Sans Light';
+	font-style: normal;
+	font-weight: 300;
+	src: url(./font/gmarketSans/eot/GmarketSansTTFLight.eot);
+	src: url(./font/gmarketSans/eot/GmarketSansTTFLight.eot?#iefix) format("embedded-opentype"), url(./font/gmarketSans/woff/GmarketSansTTFLight.woff) format("woff");
+}
+
+@font-face {
+	font-family: 'GM Sans Medium';
+	font-style: normal;
+	font-weight: 500;
+	src: url(./font/gmarketSans/eot/GmarketSansTTFMedium.eot);
+	src: url(./font/gmarketSans/eot/GmarketSansTTFMedium.eot?#iefix) format("embedded-opentype"), url(./font/gmarketSans/woff/GmarketSansTTFMedium.woff) format("woff");
+}
+
+@font-face {
+	font-family: 'GM Sans Bold';
+	font-style: normal;
+	font-weight: bold;
+	src: url(./font/gmarketSans/eot/GmarketSansTTFBold.eot);
+	src: url(./font/gmarketSans/eot/GmarketSansTTFBold.eot?#iefix) format("embedded-opentype"), url(./font/gmarketSans/woff/GmarketSansTTFBold.woff) format("woff");
+}
+
+/* ========== pretendard-static ========== */
+@font-face {
+	font-family: 'Pretendard';
+	font-style: normal;
+	font-weight: 100;
+	src: local('Pretendard Thin'), local('Pretendard-Thin'),
+		url(./font/pretendard/static/eot/Pretendard-Thin.eot),
+		url(./font/pretendard/static/eot/Pretendard-Thin.eot?#iefix) format('embedded-opentype'),
+		url(./font/pretendard/static/woff2/Pretendard-Thin.woff2) format("woff2"), 
+		url(./font/pretendard/static/woff/Pretendard-Thin.woff) format("woff");
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-style: normal;
+	font-weight: 200;
+	src: local('Pretendard ExtraLight'), local('Pretendard-ExtraLight'),
+		url(./font/pretendard/static/eot/Pretendard-ExtraLight.eot),
+		url(./font/pretendard/static/eot/Pretendard-ExtraLight.eot?#iefix) format('embedded-opentype'),
+		url(./font/pretendard/static/woff2/Pretendard-ExtraLight.woff2) format("woff2"),
+		url(./font/pretendard/static/woff/Pretendard-ExtraLight.woff) format("woff");
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Pretendard Light'), local('Pretendard-Light'),
+		url(./font/pretendard/static/eot/Pretendard-Light.eot),
+		url(./font/pretendard/static/eot/Pretendard-Light.eot?#iefix) format('embedded-opentype'),
+		url(./font/pretendard/static/woff2/Pretendard-Light.woff2) format("woff2"),
+		url(./font/pretendard/static/woff/Pretendard-Light.woff) format("woff");
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Pretendard Regular'), local('Pretendard-Regular'),
+		url(./font/pretendard/static/eot/Pretendard-Regular.eot),
+		url(./font/pretendard/static/eot/Pretendard-Regular.eot?#iefix) format('embedded-opentype'),
+		url(./font/pretendard/static/woff2/Pretendard-Regular.woff2) format("woff2"), 
+		url(./font/pretendard/static/woff/Pretendard-Regular.woff) format("woff");
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-style: normal;
+	font-weight: 500;
+	src: local('Pretendard Medium'), local('Pretendard-Medium'),
+		url(./font/pretendard/static/eot/Pretendard-Medium.eot),
+		url(./font/pretendard/static/eot/Pretendard-Medium.eot?#iefix) format('embedded-opentype'),
+		url(./font/pretendard/static/woff2/Pretendard-Medium.woff2) format("woff2"), 
+		url(./font/pretendard/static/woff/Pretendard-Medium.woff) format("woff");
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-style: normal;
+	font-weight: 600;
+	src: local('Pretendard SemiBold'), local('Pretendard-SemiBold'),
+		url(./font/pretendard/static/eot/Pretendard-SemiBold.eot),
+		url(./font/pretendard/static/eot/Pretendard-SemiBold.eot?#iefix) format('embedded-opentype'),
+		url(./font/pretendard/static/woff2/Pretendard-SemiBold.woff2) format("woff2"), 
+		url(./font/pretendard/static/woff/Pretendard-SemiBold.woff) format("woff");
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Pretendard Bold'), local('Pretendard-Bold'),
+		url(./font/pretendard/static/eot/Pretendard-Bold.eot),
+		url(./font/pretendard/static/eot/Pretendard-Bold.eot?#iefix) format('embedded-opentype'),
+		url(./font/pretendard/static/woff2/Pretendard-Bold.woff2) format("woff2"), 
+		url(./font/pretendard/static/woff/Pretendard-Bold.woff) format("woff");
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-style: normal;
+	font-weight: 800;
+	src: local('Pretendard ExtraBold'), local('Pretendard-ExtraBold'),
+		url(./font/pretendard/static/eot/Pretendard-ExtraBold.eot),
+		url(./font/pretendard/static/eot/Pretendard-ExtraBold.eot?#iefix) format('embedded-opentype'),
+		url(./font/pretendard/static/woff2/Pretendard-ExtraBold.woff2) format("woff2"), 
+		url(./font/pretendard/static/woff/Pretendard-ExtraBold.woff) format("woff");
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-style: normal;
+	font-weight: 900;
+	src: local('Pretendard Black'), local('Pretendard-Black'),
+		url(./font/pretendard/static/eot/Pretendard-Black.eot),
+		url(./font/pretendard/static/eot/Pretendard-Black.eot?#iefix) format('embedded-opentype'),
+		url(./font/pretendard/static/woff2/Pretendard-Black.woff2) format("woff2"), 
+		url(./font/pretendard/static/woff/Pretendard-Black.woff) format("woff");
+}
+
+/* ========== pretendard-variable ========== */
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-style: normal;
+	font-weight: normal;
+	src: local('PretendardVariable Regular'), local('PretendardVariable-Regular'), 
+		url(./font/pretendard/variable/PretendardVariable-Regular.eot),
+		url(./font/pretendard/variable/PretendardVariable-Regular.eot?#iefix) format('embedded-opentype'),
+		url(./font/pretendard/variable/PretendardVariable-Regular.woff2) format("woff2"), 
+		url(./font/pretendard/variable/PretendardVariable-Regular.woff) format("woff");
+}

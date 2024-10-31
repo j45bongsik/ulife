@@ -1,0 +1,521 @@
+
+/********************************************************************
+              header area
+********************************************************************/
+header {
+  position: absolute; top: 0; left: 0; z-index: 1;
+  width: 100%; height: 68px; min-width: 1280px;
+  box-shadow: 0 0px 5px 0 rgba(0, 0, 0, .15);
+  background-color: var(--color-white);
+}
+header .inner {
+  display: flex;
+  flex-direction: row; justify-content: space-between; align-items: center;
+  padding: 0 30px; height: 100%;
+}
+/* header .inner .logo-box > a {
+  width: auto; height: 35px;
+} */
+header .inner .logo-box {}
+header .inner .logo-box .logo {
+  
+}
+header .inner .logo-box .logo a {
+  display: block;font-size: 40px;
+  color: #4AAEE7;
+  font-family: var(--font-family-roboto);
+  font-weight: 900;
+  letter-spacing: -0.4em;
+}
+header .inner .logo-box .logo span {
+  color: inherit;
+}
+header .inner .logo-box .logo span:not(:first-child) {
+  color: #456296;
+}
+header .inner .logo-box .logo span:nth-child(2) {
+  
+}
+header .inner .mem-btn {
+  display: flex;
+  flex-direction: row; justify-content: flex-end; align-items: center;
+}
+header .inner .mem-btn > a {
+  display: flex; align-items: center;
+  height: 34px;
+  padding: 0 30px;
+  border: 1px solid var(--color-ligthGray);
+  font-family: var(--font-family-malgun);
+  font-size: var(--font-12); font-weight: bold;
+}
+header .inner .mem-btn > a:not(:first-child) {
+  border-left: 0px;
+}
+header .inner .mem-btn > a.logout {
+  color: var(--color-red);
+}
+header .inner .mem-btn > a.mypage {
+  color: var(--color-navyBlue);
+}
+header .inner .mem-btn > a.logout:hover {
+  border-left: 1px solid var(--color-red);
+  border-color: var(--color-red);
+  color: var(--color-red);
+  margin-left: -1px;
+}
+header .inner .mem-btn > a.mypage:hover {
+  border-color: var(--color-navyBlue);
+  color: var(--color-navyBlue);
+}
+header .inner .mem-btn > a.logout:active {
+  background-color: var(--color-red); border-color: var(--color-red);
+  color: var(--color-white);
+}
+header .inner .mem-btn > a.mypage:active {
+  background-color: var(--color-navyBlue); border-color: var(--color-navyBlue);
+  color: var(--color-white);
+}
+
+header ul {
+  list-style-type: none;
+}
+
+
+.subtitleMenu {
+  position: relative;
+  margin-left: auto; margin-right: 50px;
+}
+.subtitleMenu .activeIndicator {
+  position: absolute;
+  left: 0; bottom: -10px;
+  width: 0;
+  height: 3px;
+  background: var(--color-point);
+  transition: 0.1s;
+}
+
+.subtitleMenu ul {
+  position: relative;
+  display: flex; justify-content: flex-end; align-items: center;
+}
+
+.subtitleMenu ul li  {}
+.subtitleMenu ul li:last-child  {
+  position: relative;
+}
+.subtitleMenu ul li:last-child:after  {
+  content: ''; position: absolute;
+  top: 50%; right: -16px; transform: translateY(-50%);
+  width: 1px; height: 25px; background: #c2c2c2;
+}
+.subtitleMenu ul li:not(:first-child)  {
+  margin-left: 10px;
+}
+.subtitleMenu ul li a {
+  color: var(--color-navyBlue);
+  padding: 0px 10px;
+  font-size: 14px;
+}
+.subtitleMenu ul li a.active {
+}
+
+
+/********************************************************************
+              common icon style css
+********************************************************************/
+i.icon-addn {
+  -webkit-mask: url('/assets/img/common/icon-addn.svg') no-repeat center;
+          mask: url('/assets/img/common/icon-addn.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-search {
+  -webkit-mask: url('/assets/img/service/icon-search.svg') no-repeat center;
+          mask: url('/assets/img/service/icon-search.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+  cursor: pointer;
+}
+i.icon-plus {
+  -webkit-mask: url('/assets/img/service/icon-plus.svg') no-repeat center;
+          mask: url('/assets/img/service/icon-plus.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-email {
+  -webkit-mask: url('/assets/img/service/icon-email.svg') no-repeat center;
+          mask: url('/assets/img/service/icon-email.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-tel {
+  -webkit-mask: url('/assets/img/service/icon-tel.svg') no-repeat center;
+          mask: url('/assets/img/service/icon-tel.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-file {
+  -webkit-mask: url('/assets/img/service/icon-file.svg') no-repeat center;
+          mask: url('/assets/img/service/icon-file.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+
+i.icon-estimate {
+  -webkit-mask: url('/assets/img/service/icon-estimate.svg') no-repeat center;
+          mask: url('/assets/img/service/icon-estimate.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-visit {
+  -webkit-mask: url('/assets/img/service/icon-visit.svg') no-repeat center;
+          mask: url('/assets/img/service/icon-visit.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+
+
+/********************************************************************
+              common style css
+********************************************************************/
+.btn-box-conts {
+  display: flex;
+  justify-content: center; align-items: center;
+  /* margin-top: 30px; */
+}
+.btn-pot-right > a,
+.btn-box-conts > a {
+  display: flex;
+  justify-content: center; align-items: center;
+  width: auto; height: auto;
+  margin-left: 10px;
+}
+.btn-box-conts > a:first-child {
+  margin-left: 0px;
+}
+.btn-pot-right {
+  position: relative;
+  margin-top: 30px;
+}
+.btn-pot-right > a {
+  position: absolute; top: 0; right: 0;
+}
+
+.radius-3 {
+  border-radius: 3px;
+}
+.radius-5 {
+  border-radius: 5px;
+}
+.radius-10 {
+  border-radius: 10px;
+}
+
+
+/********************************************************************
+              pagination style css
+********************************************************************/
+
+/************************************* paginate style */
+.paginate {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; align-content: center; justify-content: center; align-items: center;
+  width: 100%;
+  font-weight: 500; font-size: 0; text-align: center;
+  margin: 35px 0 25px;
+}
+.paginate a {
+  position: relative; 
+  zoom: 1;
+  -webkit-box-sizing: border-box; box-sizing: border-box;
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; align-items: center; justify-content: center;
+  min-width: 30px; height: 30px;
+  border: 1px solid transparent; background-color: transparent; border-radius: 3px;
+  font-size: 14px; font-weight: normal;
+  color: var(--color-fontColor);
+  margin: 0 3px; 
+  padding: 5px 10px;
+}
+.paginate strong {
+  zoom: 1;
+  -webkit-box-sizing: border-box; box-sizing: border-box;
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; align-items: center; justify-content: center;
+  min-width: 30px; height: 30px;
+  border: 1px solid transparent; background-color: transparent; border-radius: 3px;
+  font-size: 14px; font-weight: normal;
+  line-height: inherit; 
+  color: var(--color-fontColor);
+  margin: 0 3px; 
+  padding: 5px 10px;
+  color: var(--color-point);
+  background: transparent;
+  border: 1px solid var(--color-point);
+}
+.paginate a[rel="start"], .paginate a[rel="last"],
+.paginate a[rel="prev"], .paginate a[rel="next"] {
+  min-width: 30px; height: 30px;
+}
+.paginate a.prev {
+  margin-right: 10px;
+}
+.paginate a.next {
+  margin-left: 10px;
+}
+.paginate a i {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-fontColor);
+}
+.paginate a[rel="start"] i.prev-arrow-double {
+  display: block;
+  width: 13px; height: 13px;
+  -webkit-mask: url('/assets/img/service/icon-prev-arrow-double.svg?e') no-repeat center;
+          mask: url('/assets/img/service/icon-prev-arrow-double.svg?e') no-repeat center;
+}
+.paginate a[rel="last"] i.next-arrow-double {
+  display: block;
+  width: 13px; height: 13px;
+  -webkit-mask: url('/assets/img/service/icon-next-arrow-double.svg?e') no-repeat center;
+          mask: url('/assets/img/service/icon-next-arrow-double.svg?e') no-repeat center;
+}
+.paginate a[rel="prev"] i.prev-arrow {
+  display: block;
+  width: 13px; height: 13px;
+  -webkit-mask: url('/assets/img/service/icon-prev-arrow.svg?e') no-repeat center;
+          mask: url('/assets/img/service/icon-prev-arrow.svg?e') no-repeat center;
+}
+
+.paginate a[rel="next"] i.next-arrow {
+  display: block;
+  width: 13px; height: 13px;
+  -webkit-mask: url('/assets/img/service/icon-next-arrow.svg?e') no-repeat center;
+          mask: url('/assets/img/service/icon-next-arrow.svg?e') no-repeat center;
+}
+
+
+
+.paginate a:hover {
+  border-color: var(--color-point);
+}
+.paginate a:hover i {
+  background-color: var(--color-point);
+}
+
+
+
+
+/*********************************************************************************************
+						  UI Datepicker Style css
+*****************************/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  border: solid rgba(255, 255, 255, .55)!important;
+  border-width: 1px 0 0 1px!important;
+}
+.ui-datepicker td {
+  border: 1px solid #CCC !important;
+  padding: 0 !important
+}
+.ui-datepicker-calendar thead tr th span {
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+}
+.ui-widget-header {
+  background: #2d2d2d !important;
+  border: 0 !important
+}
+.ui-datepicker .ui-datepicker-title select {
+  background: #2d2d2d !important;
+  color: var(--color-white) !important;
+  font-size: 15px !important;
+}
+.ui-widget-header .ui-icon {
+  background-image: none !important;
+}
+.ui-datepicker .ui-datepicker-title {
+  margin-top: 4px !important;
+  color: #fff;
+}
+.ui-datepicker .ui-datepicker-title span {
+  color: inherit;
+}
+#ui-datepicker-div {
+  padding: 0;
+  width: 275px !important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default,
+.ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+  background: linear-gradient(20deg, #e2e2e2, #eeeeee) !important;
+}
+.ui-state-default {
+  font-size: var(--font-size-12);
+  font-weight: bold !important;
+}
+.ui-datepicker td span, .ui-datepicker td a {
+  padding: 12px 0 !important;
+  text-align: center !important;
+}
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+  width: 33% !important;
+  padding-left: 22px !important;
+}
+.ui-datepicker th {
+  padding: 0em .3em 0.2em !important;
+}
+.ui-state-active, .ui-widget-content .ui-state-active,
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover,
+.ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus,
+.ui-button:hover, .ui-button:focus {
+  background: #1EB7AD !important;
+  box-shadow: inset 0px 0px 10px #32DACF, inset 0px 0px 20px #35e5f5 !important;
+  color: var(--color-white) !important;
+}
+.ui-datepicker table {
+  margin: 0 !important;
+}
+.ui-datepicker-next, .ui-datepicker-prev {
+  border: 0 !important;
+}
+
+/*Right Arrow*/
+.ui-datepicker .ui-datepicker-next span {
+  width: 0!important;
+  height: 0!important;
+  border-left: 10px solid white!important;
+  border-right: 8px solid transparent!important;
+  border-bottom: 8px solid transparent!important;
+  border-top: 8px solid transparent!important;
+}
+
+/*Left Arrow*/
+.ui-datepicker .ui-datepicker-prev span {
+  width: 0!important;height: 0!important;
+  border-right: 10px solid white!important;
+  border-left: 8px solid transparent!important;
+  border-bottom: 8px solid transparent!important;
+  border-top: 8px solid transparent!important;
+}
+
+/* file upload */
+:root {
+  /*--bgColor: #3a3a3a;*/
+  --hoverBg: #616161;
+  --text: #bbb;
+}
+
+.filecontainer {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  width: clamp(0px, 100%, 100%);
+  height: 100%;
+  /*margin: 32px auto;*/
+  text-align: center;
+}
+.filecontainer.type02 {
+  align-items: center;
+}
+.filecontainer .noFile.off {
+  display: none;
+}
+
+.filelabel {
+  width: 100%;
+  max-width : 500px;
+  height: 150px;
+  margin: 0px;
+  cursor: pointer;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.fileinner {
+  position: relative;
+  width: 100%;
+  max-width : 500px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  line-height: 144px;
+  background-color: #fff;
+  color: var(--text);
+  border-radius: 8px;
+  border: 2px dashed #ccc;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.fileinner:hover {
+  color: var(--color-point) !important;
+  border-color: var(--color-point) !important;
+}
+
+
+.filepreview-title{
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.filepreview {
+  width: 100%;
+  padding: 10px 0px;
+  display: none !important; 
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  /* margin-bottom: 16px; */
+  border-radius: 8px;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.filepreview.on {
+  display: flex !important;
+}
+
+.filepreview li img {
+  display: none;
+}
+.filepreview li div {
+  display: flex;
+  justify-content: center; align-items: center;
+  margin-top: auto; margin-bottom: 0;
+}
+.filepreview li div p {
+  padding:0 5px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  font-weight: 600;
+}
+.filepreview li div p .btn {}
+.filepreview li div p .btn.fileDelete {}
+
+.embed-img{
+  max-width: 500px;;
+  max-height: 110px;
+  object-position: center;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+.container-img {
+  display: grid;
+}
+
+
+/* filepreview 하위의 div 는 세로로 정렬  */
+.filepreview > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* container-img 하위의 div에 들어간 글자는 container-img 하위의 img 이미지 넓이에 맞게 글자수를 뒤에는 ... 으로 줄여준다 */
+.container-img > div {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

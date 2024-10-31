@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" > -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <meta name="author" content="투어세이프">
+    <meta name="description" content="보험 종료일이 다가오는 상품이 있습니다.">
+    <meta name="keywords" content="투어세이프, 만기일안내, 보험종료일">
+
+
+    <!-- 웹폰트 적용안되면 삭제해주세요 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        .reminder {
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-size: 16px; font-weight: 400; color: #000;letter-spacing:-0.025em !important; word-break: break-word;
+        }
+        .reminder * {
+            box-sizing: border-box;
+            padding: 0; margin: 0;
+        }
+        .textArea {
+            margin-bottom: 20px;
+        }
+        .textArea .descArea {
+            position: relative;
+            padding-left: 65px;
+        }
+        .textArea .descArea .lottieArea {
+            position: absolute;
+            left: -20px;
+            bottom: -26px;
+            width: 100px;
+        }
+        .textArea .descArea p {
+            display: inline-block;
+            font-size: 16px;
+        }
+        .textArea .descArea p span.user {
+            position: relative;
+            display: inline-block;
+            padding: 0px 5px;
+            font-weight: 600;
+        }
+        .textArea .descArea p span.user:after {
+            content: ''; position: absolute; left: 0; bottom: 0;
+            width: 100%; height: 30%; background: rgba(28, 148, 255, 0.4);
+        }
+        .reminderTable {
+            display: inline-block;
+        }
+        .reminderTable * {
+            box-sizing: border-box;
+            padding: 0; margin: 0;
+        }
+        .reminderTable table {
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            border: 1px solid #d2d2d2;
+            font-size:14px; font-weight: 400; color: #000;letter-spacing:-0.025em !important; word-break: break-word;
+            table-layout: fixed;
+            border-collapse: collapse; border-spacing: 0;
+            text-align: center;
+        }
+        .reminderTable table thead tr th,.reminderTable table thead tr td {
+            height: 50px;
+            padding: 5px 8px;
+            font-weight: normal;
+            background: #1c94ff;
+            color: #fff;
+            border: 1px solid #d2d2d2;
+        }
+        .reminderTable table tbody tr th,.reminderTable table tbody tr td {
+            height: 40px;
+            padding: 5px 8px;
+            border: 1px solid #d2d2d2;
+        }
+        
+    </style>
+
+    <script src="../lib/lottie/lottie.min.js"></script>
+</head>
+
+<body>
+
+    <!-- reminder -->
+    <div class="reminder">
+        
+        <!-- textArea -->
+        <div class="textArea">
+            <div class="descArea">
+                <!-- lottieArea -->
+                <article class="lottieArea">
+                    <div id="remindLottie"></div>
+                </article>
+                <!-- //lottieArea -->
+                <p>
+                    <span class="user">토니김</span>님 안녕하세요<br />
+                    보험 종료일이 다가오는 상품을 안내해 드립니다. 확인 부탁드립니다.
+                </p>
+                
+            </div>
+        </div>
+        <!-- //textArea -->
+
+
+        <!-- reminderTable -->
+        <div class="reminderTable">
+            
+            <table>
+                <colgroup>
+                    <!-- table width 수정은 여기에서 -->
+                    <col style="width:70px;">
+                    <col style="width:300px;">
+                    <col style="width:90px;">
+                    <col style="width:200px">
+                    <col style="width:150px">
+                    <col style="width:150px;">
+                    <col style="width:130px;">
+                    <col style="width:70px;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">계약번호</th>
+                        <th scope="col">계약명</th>
+                        <th scope="col">보험종료일</th>
+                        <th scope="col">고객사</th>
+                        <th scope="col">고객쪽<br />담당자</th>
+                        <th scope="col">고객쪽<br />이메일</th>
+                        <th scope="col">고객쪽<br />연락처</th>
+                        <th scope="col">남은날짜</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>99999</td>
+                        <td>한화생명 동물농장12팀 해상항공 상품이름</td>
+                        <td>2024-03-28</td>
+                        <td>에이스아메리칸메리메리손해보험</td>
+                        <td>야옹2 과장</td>
+                        <td>length.length.length@naver.com</td>
+                        <td>010-9999-9999</td>
+                        <td>9999일</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //reminderTable -->
+    </div>
+    <!-- //reminder -->
+
+    <script>
+        /* lottie */
+        var svgContainer = document.getElementById('remindLottie');
+        var animItem = bodymovin.loadAnimation({
+            wrapper: svgContainer,
+            animType: 'svg',
+            loop: true,
+            path: '../images/reminder.json'
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+
+/********************************************************************
+              Common style css
+********************************************************************/
+.memContents {
+  display: flex;
+  justify-content: center; align-items: center;
+  width: 100%; height: 100vh;
+}
+.memContents form {
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+}
+
+/********************************************************************
+              login style css
+********************************************************************/
+.login-box {
+  display: flex; flex-direction: column; align-items: center;
+  width: 450px; /* height: 500px; */
+  padding: 50px;
+  border: 1px solid transparent;
+  background: linear-gradient(#fff, #fff) padding-box
+              ,linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+  border-radius: 5px;
+  animation: gradient 5s ease infinite;
+  background-size: 200% 100%;
+  box-shadow: 5px 5px 17px 2px rgba(131, 131, 131, 0.2)
+}
+.login-box.erp {
+  display: flex; flex-direction: column; align-items: center;
+  width: 450px; /* height: 500px; */
+  padding: 50px;
+  border: 1px solid transparent;
+  background: linear-gradient(#fff, #fff) padding-box
+              ,linear-gradient(145deg, transparent 35%,#0a1c00, #e9ff40) border-box;
+  border-radius: 5px;
+  animation: gradient 5s ease infinite;
+  background-size: 200% 100%;
+  box-shadow: 5px 5px 17px 2px rgba(131, 131, 131, 0.2)
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.login-box .logo {
+}
+.login-box .naming {
+  font-size: var(--font-22); font-weight: 400; color: #849ccb;
+  margin-top: 20px;
+}
+.login-box .naming > strong {
+  color: var(--color-point); font-weight: 700;
+  font-size: 20px;
+}
+.login-box.erp .naming > strong {
+  color: var(--color-emerald);
+  font-size: 22px;
+}
+.login-box .input-box {
+  margin-top: 30px;
+}
+.login-box .input-box > .input-item {
+  position: relative;
+  display: flex;
+  flex-direction: row; justify-content: space-between; align-items: center;
+  width: 340px; height: 58px;
+  background-color: #E9ECF1;
+  margin-top: 10px;
+}
+.login-box .input-box > .input-item > strong {
+  padding-left: 15px; min-width: 70px;
+  font-size: var(--font-16); font-weight: 700;
+}
+.login-box .input-box > .input-item > input {
+  width: calc(100% - 60px); height: 100%;
+  font-size: var(--font-15); font-weight: 500; color: var(--color-fontColor);
+  background-color: transparent;
+  padding-right: 35px;
+}
+.login-box .input-box > .input-item > input::-webkit-input-placeholder {
+  color: #99ACC2;
+}
+.login-box .check-box.save {
+  width: 100%;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+.login-box .btn-box-conts {
+  margin-top: 30px;
+}
+.login-box .btn-box-conts > a {
+  width: 340px; height: 58px;
+  border-radius: 29px;
+  font-size: var(--font-16); font-weight: 600;
+}
+.login-box.erp .btn-box-conts > .gradient {
+  background: linear-gradient(to left, var(--color-gradient-to), 
+  var(--color-emerald));
+}
+.login-box.erp .btn-box-conts > .gradient:hover {
+  background: var(--color-gradient-to);
+}
+
+/* 240214 password view on&off 추가 */
+.login-box {}
+.login-box .input-box {}
+.login-box .input-box .input-item {
+  position: relative;
+}
+.login-box .input-box .input-item label {
+  position: absolute;
+  width: 20px; height: 20px;
+  right: 8px; top: 50%; transform: translateY(-50%);
+  cursor: pointer;
+}
+.login-box .input-box .input-item label input[type="checkbox"] {
+  margin: 0; padding: 0; visibility: visible;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance:none;
+  width: 100%; height: 100%; 
+}
+
+.login-box .input-box .input-item label svg {
+  position: absolute; right: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  fill: #b5b5b5;
+}
+.login-box .input-box .input-item label svg.eye {
+  opacity: 0;
+}
+.login-box .input-box .input-item label svg.eye-slash {
+
+}
+
+.login-box .input-box .input-item label input[type="checkbox"]:checked ~ svg {
+  fill: var(--color-point);
+}
+.login-box .input-box .input-item label input[type="checkbox"]:checked ~ svg.eye {
+  opacity: 1;
+}
+.login-box .input-box .input-item label input[type="checkbox"]:checked ~ svg.eye-slash {
+  opacity: 0;
+}
+
+
+/********************************************************************
+              mypage style css
+********************************************************************/
+.memb-table {
+  margin-top: 50px;
+}
+.memb-table .searchArea + table {
+  margin-top: 15px;
+}
+
+/********************************************************************
+              table style css
+********************************************************************/
+.memb-table > table {
+  border: 1px solid var(--color-ligthGray);
+  background-color: var(--color-white);
+}
+.memb-table > table tr th,
+.memb-table > table tr td {
+  font-size: var(--font-12); font-weight: normal;
+  color: var(--color-fontColor); text-align: center;
+  padding: 12px 4px;
+  letter-spacing: 0;
+  border-bottom: 1px solid var(--color-ligthGray);
+  vertical-align: middle;
+}
+.memb-table.erpList > table tr td {
+  height: 40px;
+  padding: 4px 4px;
+}
+.memb-table.erpList > table tr td.textBlue {
+  color: blue;
+  font-weight: 600;
+}
+.memb-table > table thead th {
+  font-weight: bold; font-size: var(--font-13);
+  background-color: #E7E7E7;
+  vertical-align: middle;
+}
+.memb-table > table tr:last-child td {
+  border-bottom: 0px;
+}
+.memb-table > table tr:nth-child(2n+2) td, 
+.memb-table > table tr:nth-child(2n+2) th {
+  background-color: var(--color-snow);
+}
+.memb-table > .pagination-box {
+  margin-top: 30px; margin-bottom: 50px;
+}
+.memb-table > table tr td.left {
+  text-align: left;
+}
+.memb-table > table tr td a.down {
+  width: 80%;
+  margin: 0 auto; padding: 7px 0;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-ligthGray); border-radius: 3px;
+  color: var(--color-fontColor); font-weight: bold; font-size: var(--font-12);
+}
+.memb-table > table tr td a:hover.down {
+  background-color: var(--color-point); border-color: var(--color-point);
+  color: var(--color-white);
+}
+.memb-table > table tbody tr:hover,
+.memb-table > table tbody tr:nth-child(2n+2):hover td {
+  background-color: #e4f4fb;
+}
+.memb-table > table.table-link tr td.p0 {
+  padding: 0;
+}
+.memb-table > table tr td .day-item {
+  display: flex;
+  align-items: center; justify-content: center;
+}
+
+.memb-table.erpList.dashboard > table tr:nth-child(1) td {
+  font-size: 14px;
+  font-weight: 900;
+  color: #cd0000;
+}
+.memb-table.erpList.dashboard > table tr:nth-child(2) td {
+  font-size: 13px;
+  font-weight: 700;
+}
+.memb-table.erpList.dashboard > table tr:nth-child(3) td {
+  font-weight: 600;
+}
+.memb-table.erpList.dashboard > table tr td.disabled {
+  color: #999999;
+  text-decoration: line-through;
+}
+.day-item > span {
+  display: flex;
+  align-items: center; justify-content: center;
+  width: 24px; height: 22px;
+  border: 1px solid var(--color-ligthGray); border-radius: 3px;
+  background-color: var(--color-white);
+  margin-left: 5px;
+}
+.day-item > span:first-child {
+  margin-left: 0;
+}
+.day-item > span.active {
+  border-color: var(--color-point); background-color: var(--color-point);
+  color: var(--color-white);
+}

@@ -1,0 +1,200 @@
+
+/********************************************************************
+              main Common area
+********************************************************************/
+html, body {
+  background-color: var(--color-white);
+}
+.contents-wrap {
+  width: 100%;
+  margin-top: 62px;
+}
+.contents-wrap .search-wrap .inner {
+  width: 90%;
+  margin: 0 5%; padding-top: 20px;
+}
+
+
+@media screen and (max-width: 320px) {
+}
+@media screen and (max-width: 280px) {
+}
+
+
+/********************************************************************
+              main visual swiperjs style css
+********************************************************************/
+section {
+  margin: 50px 5% 0;
+  width: 90%;
+}
+section.main-bnner {
+  margin-top: 20px;
+}
+section.main-bnner > .inner > .swiper {
+  width: 100%; height: 220px;
+}
+section.main-bnner > .inner > .swiper .swiper-slide {
+  position: relative;
+  display: flex; align-items: center;
+}
+.swiper-backface-hidden .swiper-slide:before {
+  content: "";
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, .35);
+}
+.swiper-backface-hidden .swiper-slide > .inner {
+  position: absolute; z-index: 2;
+  display: flex;
+  flex-direction: column; align-items: flex-start;
+  font-size: 0; height: auto;
+  padding-left: 50px;
+}
+.swiper-backface-hidden .swiper-slide > .inner > strong {
+  font-size: var(--font-size-32); font-weight: 700;
+  color: var(--color-white); line-height: 1.2;
+}
+.swiper-backface-hidden .swiper-slide > .inner > p {
+  font-size: var(--font-size-26); font-weight: 600;
+  color: var(--color-white); line-height: 1.2;
+}
+.swiper-backface-hidden .swiper-slide > .inner > a {
+  display: flex;
+  justify-content: space-between; align-items: center;
+  margin-top: 50px;
+}
+.swiper-backface-hidden .swiper-slide > .inner > a.radius-circle {
+  width: calc(80px - 15px - 13px); height: 32px;
+  border-radius: 19px; border: 2px solid var(--color-white);
+  background-color: transparent;
+  font-size: var(--font-size-14); font-weight: 500; color: var(--color-white);
+  padding-left: 15px;
+}
+.swiper-backface-hidden .swiper-slide > .inner > a > i.icon-arrow {
+  width: 17px; height: 12px; margin-right: 13px;
+  background-color: var(--color-white);
+  -webkit-mask: url('../img/main/icon-arrow.svg') no-repeat center; mask: url('../img/main/icon-arrow.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+section.main-bnner > .inner > .swiper .swiper-slide.first {
+  background: url('../img/main/main-visual-01.png') no-repeat;
+  background-size: cover;
+}
+section.main-bnner > .inner > .swiper .swiper-slide.second {
+  background: url('../img/main/main-visual-02.png') no-repeat;
+  background-size: cover;
+}
+section.main-bnner > .inner > .swiper .swiper-slide.third {
+  background: url('../img/main/main-visual-03.png') no-repeat;
+  background-size: cover;
+}
+.swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal {
+  top: auto; bottom: 0;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: var(--color-point, rgba(255, 255, 255, .25));
+}
+
+
+/********************************************************************
+              main category menu swiperjs style css
+********************************************************************/
+section.catgr-menu {
+  margin: 0; margin-top: 50px;
+  width: 100%;
+}
+section.catgr-menu > .inner {
+  width: calc(100% - 5%); height: auto !important;
+  margin-left: 5%;
+  overflow: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -ms-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
+}
+section.catgr-menu > .inner > .menu-snap {
+  overflow: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -ms-scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
+}
+section.catgr-menu > .inner > .menu-snap::-webkit-scrollbar {
+  display: none
+}
+section.catgr-menu > .inner > .menu-snap a {
+  display: inline-block; 
+  width: 105px;
+  margin-right: 10px;
+  scroll-snap-align: start
+}
+section.catgr-menu > .inner > .menu-snap a > figure {
+  width: 105px !important; height: 105px !important;
+  border-radius: 100%;
+  overflow: hidden;
+  font-size: 0;
+}
+section.catgr-menu > .inner > .menu-snap a > figure > img {
+  width: 100%; height: 100%;
+}
+section.catgr-menu > .inner > .menu-snap a > strong {
+  font-size: var(--font-size-16); font-weight: 700; color: var(--color-fontColor);
+  margin-top: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+
+/********************************************************************
+              main visual swiperjs style css
+********************************************************************/
+section.best-list {
+  margin-top: 50px;
+}
+section.best-list > .inner {
+  width: 100%; height: auto;
+}
+section.best-list > .inner > ul {
+  display: flex;
+  flex-direction: row; flex-wrap: wrap;
+}
+section.best-list > .inner > ul li {
+  width: 48%;
+  margin-left: 4%; margin-bottom: 15px;
+}
+section.best-list > .inner > ul li:nth-child(2n+1) {
+  margin-left: 0%;
+}
+section.best-list > .inner > ul li > figure {
+  width: 100%; height: 135px;
+  overflow: hidden;
+}
+section.best-list > .inner > ul li > figure > img {
+  width: 100%; height: auto;
+}
+section.best-list > .inner > ul li .text-list-item {
+  display: flex;
+  flex-direction: column; align-items: flex-start;
+}
+section.best-list > .inner > ul li .text-list-item > h3 {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;  /* 말줄임 적용 */
+  font-size: var(--font-size-18);
+}
+section.best-list > .inner > ul li .text-list-item > p {
+  font-size: var(--font-size-14); font-weight: 400;
+  color: var(--color-fontGray); padding-top: 5px;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+section.best-list > .inner > ul li .text-list-item > strong {
+  font-size: var(--font-size-18); font-weight: 700;
+  color: var(--color-point);
+  padding-top: 10px;
+}

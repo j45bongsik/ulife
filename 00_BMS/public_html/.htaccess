@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteBase /
+        RewriteCond $1 !^(index\.php|images|assets|js|include|upload|common|coding|static|web_html|robots\.txt)
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule ^(.*)$ /index.php/$1 [L]
+
+        php_value upload_max_filesize 2048M
+        php_value example_max_size 2048M
+        php_value max_file_uploads 100
+        php_value memory_limit -1
+        php_value max_execution_time 6000
+        php_value date.timezone 'Asia/Seoul'
+
+        php_flag session.auto_start ON
+</IfModule>

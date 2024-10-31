@@ -1,0 +1,262 @@
+@charset "utf-8";
+/* reset */
+html, body, div, span, object,h1, h2, h3, h4, h5, h6, p, blockquote, a, button, abbr, address, img, q,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,article, aside, footer, header, section, summary{margin:0;padding:0;border:0;font:inherit;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display: block;}/* HTML5 display-role reset for older browsers */
+body,html{width: 100%;/* height: 100%;  */margin: 0; padding: 0; font-family:'Noto Sans', "맑은 고딕", "Malgun Gothic", Dotum, sans-serif;font-size:13px; font-weight: 350; color: #333;letter-spacing:-0.045em !important;}
+
+ol, ul{list-style: none;}
+table{border-collapse: collapse;border-spacing: 0;}
+a[href^="tel"] {color: inherit; text-decoration: none;}
+a{text-decoration: none;color: inherit;}
+address{font-style: normal;}
+button{display: inline-block;border: none;background-color: transparent;cursor: pointer;}
+select{appearance: none;
+  &::-ms-expand {display:none;}
+}
+input,button,a,select,option{font-family:inherit;font-size:inherit;}
+input[type="checkbox"], input[type="radio"]{margin: 0;
+  &::-ms-check{border:solid 1px #fff;}
+}
+input[type="text"]::-ms-clear {display:none;}
+caption,hr{overflow: hidden;position: relative;left: 0;top: 0;width: 1px;height: 1px;background: 0 0;
+font-size: 0;color: transparent;line-height: 0;text-indent: 100%; clip: rect(0, 0, 0, 0);}
+pre{word-break:break-all;white-space:pre-line;}
+li{list-style: none;}
+figure{margin: 0;}
+img{-webkit-user-drag: none; -khtml-user-drag: none; -moz-user-drag: none; -o-user-drag: none; border: none;}
+em,i{font-style: normal;}
+strong{font-weight: normal;}
+
+// number spin 버튼 제거
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox  */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* PLACEHOLDER */
+::-webkit-input-placeholder { color: #c6c4c4; }
+    ::-ms-input-placeholder { color: #c6c4c4; }
+         ::-moz-placeholder { color: #c6c4c4; }
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder { color: var(--colorPrimary); transition: 0.3s;}
+          input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder { color: var(--colorPrimary); transition: 0.3s;}
+                  input:focus::-moz-placeholder, textarea:focus::-moz-placeholder { color: var(--colorPrimary); transition: 0.3s;}
+
+/* input 자동완성 배경색 설정 */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-text-fill-color: #000 !important;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+    box-shadow: 0 0 0px 1000px #fff inset !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+
+input {
+	border: none;
+	outline: none;
+	border-radius: 0;
+}
+
+input:autofill,
+input:autofill:hover,
+input:autofill:focus,
+input:autofill:active {
+	-webkit-text-fill-color: #1e1e1e;
+    -webkit-box-shadow: 0 0 0px 1000px #E9ECF1 inset;
+    box-shadow: 0 0 0px 1000px #E9ECF1 inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input[type="date"] {
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #c6c6c6;
+	padding: 4px 5px;
+	font-size: 16px;
+	color: #000;
+	background: none;
+	text-align: left !important;
+}
+input[type="date"] {
+	position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+	position: absolute; // 이를 설정하기 위해 사전에 relative를 설정한 것이다.
+	left: 0;
+	top: 0;
+	width: 100%;
+	background: transparent; // 배경은 투명하게,
+	cursor: pointer;
+}
+input[type="date"]::before {
+	content: attr(placeholder); // input 태그의 placeholder라는 속성값을 가져와서 content로 사용한다. 보통은 placeholder보다는 data-placeholder라는 커스텀 속성을 만들어서 사용하시는 것 같다.
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #d9d9d9;
+	text-align-last: left;
+}
+
+  // input에 어떠한 유효값이 입력된 상태인지 확인하는 선택자
+  // 날짜를 선택하면 유효값이 입력된다.
+  // 이 속성을 활용하고자 한다면 반드시 태그에 required 속성을 달아줘야한다.
+input[type="date"]:valid::before {
+	display: none; // 유효값이 입력된 경우 before에 있는 것을 사라지게 한다. 즉, placeholder를 사라지게 한다.
+}
+
+input[type="date"]::-webkit-datetime-edit-text {
+    -webkit-appearance: none;
+    display: none;
+}
+input[type="date"]::-webkit-datetime-edit-month-field{
+    -webkit-appearance: none;
+    display: none;
+}
+input[type="date"]::-webkit-datetime-edit-day-field {
+    -webkit-appearance: none;
+    display: none;
+}
+input[type="date"]::-webkit-datetime-edit-year-field {
+    -webkit-appearance: none;
+    display: none;
+}
+
+/* common */
+*{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+
+/* global class */
+.clearFix:after{content: "";display: block;clear: both;}
+.hidden{display:block;margin: 0;padding: 0;width: 0;height: 0;overflow: hidden;font-size: 0;line-height: 0;}
+.txt-center{text-align:center!important;}
+.txt-left{text-align: left!important;}
+.txt-right{text-align: right!important;}
+.pos-r{position:relative;}
+.va-t{vertical-align: top;}
+.overflow-y{overflow-y: auto;}
+.overflow-x{overflow-x: auto;}
+.flex{display:flex;
+  &.ac{align-items:center;}
+  &.sb{justify-content: space-between;}
+  &.top{align-items:flex-start;}
+  &.bottom{align-items:flex-end;}
+  &.right{justify-content:flex-end;}
+}
+.f1{flex: 1;}
+
+/* Accessibility Navigation */
+#accNav {position:absolute; top:0; left:0; z-index:999999999; width:100%; height:0;}
+#accNav a {display:block; position:absolute; left:0; top:0; overflow:hidden; width:1px; height:1px; margin-left:-1px; margin-bottom:-1px; text-align:center; color:#fff; white-space:nowrap;}
+#accNav a:focus,
+#accNav a:hover,
+#accNav a:active {z-index:1000; width:100%; height:auto; padding:5px 0; background:#444; color:#fff; font-weight:700;}
+
+.cScrollY {
+	overflow-x: hidden;
+	overflow-y: auto;
+	&::-webkit-scrollbar {
+		width: 5px;
+		height: 5px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--colorBlack-01);
+	}
+	&::-webkit-scrollbar-track {
+		background-color: var(--colorGray-02);
+	}
+}
+
+// 노치대응
+// 테스트용 safe area 변수 (값이 0일때는 0% 또는 0px 사용)
+// $safeAreaMap: ("top": 44px, "right": 0%, "bottom": 34px, "left": 0%);
+$safeAreaMap: (
+    "top": env(safe-area-inset-top), 
+    "right": env(safe-area-inset-right),
+    "bottom": env(safe-area-inset-bottom), 
+    "left": env(safe-area-inset-left)
+);
+
+$safe-top: map-get($safeAreaMap,"top");
+$safe-right: map-get($safeAreaMap,"right");
+$safe-bottom: map-get($safeAreaMap,"bottom");
+$safe-left: map-get($safeAreaMap,"left");
+
+/**
+ * safe-area-inset 처리
+ * $dir - 방향(all, top, right, bottom, left, 생략가능)
+ * $value - 더해질 값(생략가능)
+ */
+
+@function safe($dir: all, $value: 0) {
+	@if ($dir == all) {
+		@if ($value > 0) {
+			@return calc(#{$value} + #{map-get($safeAreaMap,"top")}) calc(#{$value} + #{map-get($safeAreaMap,"right")}) calc(#{$value} + #{map-get($safeAreaMap,"bottom")}) calc(#{$value} + #{map-get($safeAreaMap,"left")});
+		}
+		@else if ($value < 0) {
+			@return calc((#{-$value} + #{map-get($safeAreaMap,"top")}) * -1) calc((#{-$value} + #{map-get($safeAreaMap,"right")}) * -1) calc((#{-$value} + #{map-get($safeAreaMap,"bottom")}) * -1) calc((#{-$value} + #{map-get($safeAreaMap,"left")}) * -1);
+		}
+		@else {
+			@return map-get($safeAreaMap,"top") map-get($safeAreaMap,"right") map-get($safeAreaMap,"bottom") map-get($safeAreaMap,"left");
+		}
+	}
+	@else {
+		@if ($value > 0) {
+			@return calc(#{$value} + #{map-get($safeAreaMap,$dir)});
+		}
+		@else if ($value< 0) {
+			@return calc((#{-$value} + #{map-get($safeAreaMap,$dir)}) * -1);
+		}
+		@else {
+			@return map-get($safeAreaMap,$dir);
+		}
+	}
+}
+
+:root {
+	--colorBlack-01: #000;
+	--colorBlack-02: #050505;
+	--colorBlack-03: #252525;
+	--colorBlack-04: #515151;
+
+	--colorWhite: #fff;
+	--colorWhite-02: #fffcfb;
+
+	--colorPrimary: #2e4ca6;
+	--colorPrimary-02: #0B69F6;
+	--colorPrimary-03: #0d6efd;
+	--colorPrimary-04: #0666B2;
+	--colorPrimary-05: #4167d9;
+	--colorPrimary-06: #005e79;
+
+	--colorDarkBlue: #16386C;
+	--colorDarkSlateBlue: #2c55a2;
+
+	--colorRoyalBlue: #5692ce;
+
+	--colorCyan: #26ffff;
+
+	--colorGray-01: #bec8da;
+	--colorGray-02: #d2d2d2;
+	--colorGray-03: #f5f5f5;
+	--colorGray-04: #d3d3d3;
+	--colorGray-05: #f8f8f8;
+	--colorGray-06: #505050;
+	--colorGray-07: #cfcfcf;
+	--colorGray-08: #e3e3e3;
+	--colorGray-09: #e9e9e9;
+	--colorGray-10: #a9a9a9;
+	--colorGray-11: #eeeeee;
+
+	--colorRed-01: #ffa6af;
+	--colorRed-02: #c82333;
+	--colorRed-03: #fe3b1f;
+}
